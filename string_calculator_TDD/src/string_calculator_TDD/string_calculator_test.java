@@ -12,6 +12,14 @@ public class string_calculator_test {
 		calculator calc=new calculator();
 		assertEquals(calc.Add(""), 0);
 	}
+	
+	@Test
+	public void oneNumber()
+	{
+		calculator calc=new calculator();
+		assertEquals(calc.Add("1"), 1);
+	}
+
 
 
 }
