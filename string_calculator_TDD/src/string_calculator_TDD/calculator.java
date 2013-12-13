@@ -11,7 +11,7 @@ public class calculator {
 		}
 		else
 		{
-			return 1;
+			return Integer.parseInt(str);
 		}
 	}
 
