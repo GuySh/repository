@@ -19,6 +19,13 @@ public class string_calculator_test {
 		calculator calc=new calculator();
 		assertEquals(calc.Add("1"), 1);
 	}
+	
+	@Test
+	public void TwoNumbers() throws Exception
+	{
+		calculator calc=new calculator();
+		assertEquals(calc.Add("1,2"), 3);
+	}
 
 
 
