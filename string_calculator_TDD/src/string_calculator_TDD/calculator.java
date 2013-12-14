@@ -9,6 +9,10 @@ public class calculator {
 		{
 			return 0;
 		}
+		if(str.length() == 1)
+		{
+			return  Integer.parseInt(str);
+		}
 
 		
 		
