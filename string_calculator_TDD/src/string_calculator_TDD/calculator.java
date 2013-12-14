@@ -1,3 +1,8 @@
+/*
+ * Guy shimoni
+ * gitHub login: GuySh
+ * */
+
 package string_calculator_TDD;
 
 public class calculator {
