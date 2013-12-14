@@ -34,6 +34,11 @@ public class string_calculator_test {
 		assertEquals(calc.Add("1,2"), 3);
 	}
 
+	@Test
+	public void lotOfNumbers()
+	{
+		assertEquals(calc.Add("1,2,3,4"), 10);
+	}
 
 
 }
