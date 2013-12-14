@@ -2,7 +2,7 @@ package string_calculator_TDD;
 
 public class calculator {
 
-	public int Add(String str)
+	public int Add(String str) throws Exception
 	{
 
 		if(str.isEmpty())
@@ -31,8 +31,21 @@ public class calculator {
 		
 		
 		
-		for( ; i<numbers.length ; i++)
+		for(  ; i<numbers.length ; i++)
 		{
+			if(Integer.parseInt(numbers[i]) < 0)
+			{
+				String temp=" ";
+				for(int j=i ; j<numbers.length ; j++)
+				{
+					if(Integer.parseInt(numbers[j]) < 0)
+					{
+						temp+=numbers[j]+" ";
+					}
+				}
+				
+				throw new Exception("negatives not allowed" + temp);
+			}
 			sum=sum+Integer.parseInt(numbers[i]);
 		}
 		

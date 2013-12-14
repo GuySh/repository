@@ -15,39 +15,39 @@ public class string_calculator_test {
 		calc=new calculator();
 	}
 
-	@Test
-	public void EmptyZero()
+	@Test 
+	public void EmptyZero() throws Exception
 	{
 		calculator calc=new calculator();
 		assertEquals(calc.Add(""), 0);
 	}
 
 	@Test
-	public void oneNumber()
+	public void oneNumber() throws Exception
 	{
 		assertEquals(calc.Add("1"), 1);
 	}
 
 	@Test
-	public void TwoNumbers()
+	public void TwoNumbers() throws Exception
 	{
 		assertEquals(calc.Add("1,2"), 3);
 	}
 
 	@Test
-	public void lotOfNumbers()
+	public void lotOfNumbers() throws Exception
 	{
 		assertEquals(calc.Add("1,2,3,4"), 10);
 	}
 
 	@Test
-	public void lineBetweenNumbers()
+	public void lineBetweenNumbers() throws Exception
 	{
 		assertEquals(calc.Add("1,2\n3,4"), 10);
 	}
 
 	@Test
-	public void differentDelimiters()
+	public void differentDelimiters() throws Exception
 	{
 		assertEquals(calc.Add("//;\n1;2"), 3);
 	}
@@ -55,8 +55,15 @@ public class string_calculator_test {
 	@Test
 	public void negativeNumberWillThrowAnException() 
 	{
-
-		assertEquals(calc.Add("-1,-3,2"), 1);
+		try
+		{
+			assertEquals(calc.Add("-1,-3,2"), 1);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
 	}
 
 
