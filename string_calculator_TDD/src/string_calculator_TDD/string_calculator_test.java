@@ -49,7 +49,7 @@ public class string_calculator_test {
 	@Test
 	public void differentDelimiters()
 	{
-		assertEquals(calc.Add("//g\n1g2"), 3);
+		assertEquals(calc.Add("//;\n1;2"), 3);
 	}
 
 

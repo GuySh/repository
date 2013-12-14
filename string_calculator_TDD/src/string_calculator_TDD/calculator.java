@@ -13,9 +13,25 @@ public class calculator {
 		String arg = "[,\n]+";
 		String[] numbers=str.split(arg);
 		
-		int i;
+		int i=0;
 		int sum=0;
-		for(i=0 ; i<numbers.length ; i++)
+		char c;
+		try
+		{
+		Integer.parseInt(numbers[0]);
+		}
+		catch(NumberFormatException e)
+		{
+			c=numbers[0].charAt(2);
+			str=str.replace(c, ',');
+			numbers=str.split("[,\n]+");
+			i=1;
+			
+		}
+		
+		
+		
+		for( ; i<numbers.length ; i++)
 		{
 			sum=sum+Integer.parseInt(numbers[i]);
 		}
