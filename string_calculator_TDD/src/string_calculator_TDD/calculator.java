@@ -18,7 +18,15 @@ public class calculator {
 		
 		String[] numbers=str.split(",");
 		
-		return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+		int i;
+		int sum=0;
+		for(i=0 ; i<numbers.length ; i++)
+		{
+			sum=sum+Integer.parseInt(numbers[i]);
+		}
+		
+		return sum;
+		
 
 	}
 
