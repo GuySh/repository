@@ -45,6 +45,12 @@ public class string_calculator_test {
 	{
 		assertEquals(calc.Add("1,2\n3,4"), 10);
 	}
+	
+	@Test
+	public void differentDelimiters()
+	{
+		assertEquals(calc.Add("//g\n1g2"), 3);
+	}
 
 
 }
