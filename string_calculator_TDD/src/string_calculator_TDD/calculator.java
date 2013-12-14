@@ -24,7 +24,7 @@ public class calculator {
 		{
 			c=numbers[0].charAt(2);
 			str=str.replace(c, ',');
-			numbers=str.split("[,\n]+");
+			numbers=str.split(arg);
 			i=1;
 			
 		}
