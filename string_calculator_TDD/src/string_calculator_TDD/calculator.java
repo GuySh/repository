@@ -10,8 +10,8 @@ public class calculator {
 			return 0;
 		}
 		
-		
-		String[] numbers=str.split("[,\n]+");
+		String arg = "[,\n]+";
+		String[] numbers=str.split(arg);
 		
 		int i;
 		int sum=0;
