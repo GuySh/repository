@@ -39,6 +39,12 @@ public class string_calculator_test {
 	{
 		assertEquals(calc.Add("1,2,3,4"), 10);
 	}
+	
+	@Test
+	public void lineBetweenNumbers()
+	{
+		assertEquals(calc.Add("1,2\n3,4"), 10);
+	}
 
 
 }
